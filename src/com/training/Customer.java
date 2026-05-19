@@ -22,7 +22,7 @@ public class Customer {
 		System.out.println("Customer class");
 		System.out.println("Customer Name: " +customerName);
 		System.out.println("Customer Name: " + fname + " " + lname + ", Age: " + age);
-		 if (age > 18) {
+		 if (age >= 18) {
 	            System.out.println("Established to open an account");
 	        } else {
 	            System.out.println("Not yet established to open an account");
