@@ -1,11 +1,38 @@
 package com.training;
 import java.util.Scanner;
-public class Customer {
+public class demo {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in); 
-		System.out.println("ِEnter customer name:");
-		String customerName = sc.nextLine();
+		int i = 0;
+		while(true) {
+			System.out.println("Enter x to exit or any other key to continue");
+			String choice = sc.nextLine();
+			if(choice.equalsIgnoreCase("X")) {
+				break;
+			}
+			i++;
+			  System.out.println("Enter first name for customer: " + i);
+	          sc.nextLine();
+	          System.out.println("Enter last name for customer: " + i);
+	          sc.nextLine();
+	          System.out.println("Enter age for customer: " + i);
+	          sc.nextLine().charAt(0);
+		}
+		System.out.println("ِTotal number of customer saved: "+i);
+		
+		for(int j = 0; j<3;j++) {
+			System.out.println("ِNumber of iteration:"+ j+1);
+		}
+		
+		int k = 0;
+		do {
+			System.out.println("Inside do while loo");
+			k++;
+		}while(k<3);
+		
+		//System.out.println("ِEnter customer name:");
+		//String customerName = sc.nextLine();
 		//next() -> will take single string without space
 		//nextInt() -> to input integer values
 		byte b = 112;
@@ -20,7 +47,7 @@ public class Customer {
 		System.out.println("ِAge:");
 		int age = sc.nextInt();
 		System.out.println("Customer class");
-		System.out.println("Customer Name: " +customerName);
+		//System.out.println("Customer Name: " +customerName);
 		System.out.println("Customer Name: " + fname + " " + lname + ", Age: " + age);
 		 if (age >= 18) {
 	            System.out.println("Established to open an account");
