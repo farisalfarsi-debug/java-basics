@@ -2,39 +2,35 @@ package com.training;
 
 public class CurrentAccount extends Account {
 
-	 private double overdraftLimit;
+    private double overdraftLimit;
 
-	    // Constructor
-	    public CurrentAccount(String accountNumber,
-	                          String customerName,
-	                          double balance,
-	                          double overdraftLimit) {
+    // Constructor
+    public CurrentAccount(String accountNumber,
+                          String customerName,
+                          double balance,
+                          double overdraftLimit) {
 
-	        super(accountNumber, customerName, balance);
+        super(accountNumber, customerName, balance);
 
-	        this.overdraftLimit = overdraftLimit;
-	    }
-	    
-	    
+        this.overdraftLimit = overdraftLimit;
+    }
 
-	    public double getOverdraftLimit() {
-			return overdraftLimit;
-		}
+    public double getOverdraftLimit() {
 
+        return overdraftLimit;
+    }
 
+    public void setOverdraftLimit(double overdraftLimit) {
 
-		public void setOverdraftLimit(double overdraftLimit) {
-			this.overdraftLimit = overdraftLimit;
-		}
+        this.overdraftLimit = overdraftLimit;
+    }
 
+    @Override
+    public String toString() {
 
-
-		@Override
-	    public String toString() {
-
-	        return "CurrentAccount [overdraftLimit=" + overdraftLimit
-	                + ", accountNumber=" + accountNumber
-	                + ", customerName=" + customerName
-	                + ", balance=" + balance + "]";
-	    }
-	}
+        return "CurrentAccount [overdraftLimit=" + overdraftLimit
+                + ", accountNumber=" + accountNumber
+                + ", customerName=" + customerName
+                + ", balance=" + balance + "]";
+    }
+}

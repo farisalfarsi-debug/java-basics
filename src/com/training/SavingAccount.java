@@ -2,7 +2,7 @@ package com.training;
 
 public class SavingAccount extends Account {
 
-	private double interestRate;
+    private double interestRate;
 
     // Constructor
     public SavingAccount(String accountNumber,
@@ -14,31 +14,29 @@ public class SavingAccount extends Account {
 
         this.interestRate = interestRate;
     }
-    
-    
 
     public double getInterestRate() {
-		return interestRate;
-	}
 
+        return interestRate;
+    }
 
+    public void setInterestRate(double interestRate) {
 
-	public void setInterestRate(double interestRate) {
-		this.interestRate = interestRate;
-	}
+        this.interestRate = interestRate;
+    }
 
-	 // Method to add interest
+    // Add Interest
     public void addInterest() {
 
-        double interest = balance * interestRate / 100;
+        double interest =
+                balance * interestRate / 100;
 
         balance = balance + interest;
 
         System.out.println("Interest Added: " + interest);
     }
 
-
-	@Override
+    @Override
     public String toString() {
 
         return "SavingAccount [interestRate=" + interestRate

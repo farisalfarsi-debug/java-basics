@@ -1,61 +1,55 @@
 package com.training;
 
 public class Account {
-	    protected String accountNumber;
-	    protected String customerName;
-	    protected double balance;
 
-	    // Constructor
-	    public Account(String accountNumber, String customerName, double balance) {
+    protected String accountNumber;
+    protected String customerName;
+    protected double balance;
 
-	        this.accountNumber = accountNumber;
-	        this.customerName = customerName;
-	        this.balance = balance;
-	    }
+    // Constructor
+    public Account(String accountNumber,
+                   String customerName,
+                   double balance) {
 
-	    // Deposit method
-	    public void deposit(double amount) {
+        this.accountNumber = accountNumber;
+        this.customerName = customerName;
+        this.balance = balance;
+    }
 
-	        balance = balance + amount;
-	        System.out.println(amount + " deposited successfully");
-	    }
+    // Deposit method
+    public void deposit(double amount) {
 
-	    // Withdraw method
-	    public void withdraw(double amount) {
+        balance = balance + amount;
 
-	        if (amount <= balance) {
+        System.out.println(amount + " deposited successfully");
+    }
 
-	            balance = balance - amount;
-	            System.out.println(amount + " withdrawn successfully");
+    // Withdraw method
+    public void withdraw(double amount) {
 
-	        } else {
+        if (amount <= balance) {
 
-	            System.out.println("No balance");
-	        }
-	    }
+            balance = balance - amount;
 
-	    // Display balance
-	    public double displayBalance() {
+            System.out.println(amount + " withdrawn successfully");
 
-	        return balance;
-	    }
+        } else {
 
-	    @Override
-	    public String toString() {
+            System.out.println("No balance");
+        }
+    }
 
-	        return "Account Number: " + accountNumber
-	                + ", Customer Name: " + customerName
-	                + ", Balance: " + balance;
-	    }
-	}
+    // Display balance
+    public double displayBalance() {
 
+        return balance;
+    }
 
+    @Override
+    public String toString() {
 
-
-// Demonstrate the concept of inheritance in java by crating Account class having fields like
-// account number, customer name, balance and methods like deposit, withdraw and display balance.
-//then create two sub-classes, SavingAccount and CurrentAmount having fields interestRate and 
-//overderafLimit respectively
-// create an addInterest method in savingAccount class where in you should add this interestRate to
-//balance
-// add a withdraw  
+        return "Account Number: " + accountNumber
+                + ", Customer Name: " + customerName
+                + ", Balance: " + balance;
+    }
+}

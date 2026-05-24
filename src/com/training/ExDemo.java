@@ -8,12 +8,12 @@ public class ExDemo {
 		try {
 			y = 8/x;
 		}
-		catch(Exception e) {
+		catch(NumberFormatException e) {
 			System.out.println("ArithmeticException");
 		}
-		//catch(ArithmeticException e) {
-			//System.out.println("ArithmeticException");
-		//} 
+		catch(ArithmeticException e) {
+			System.out.println("ArithmeticException");
+		} 
 		finally {
 			System.out.println("Finally block");
 		}
